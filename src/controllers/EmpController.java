@@ -1,6 +1,7 @@
 package controllers;
 
 import ent.Employee;
+import ent.Programmer;
 import repositories.interfaces.IEmpRepositories;
 
 import java.security.PublicKey;
@@ -14,7 +15,7 @@ public class EmpController {
     public EmpController(IEmpRepositories repo){this.repo=repo;}
 
     public String createEmp(String name, String surname, int salary, String post, Date hire_date,String language, String project){
-        Employee employee=new Employee(name,surname,salary,post,hire_date,language,project);
+        Programmer employee=new Programmer(name,surname,salary,post,hire_date,language,project);
 
         boolean created=repo.CreateEmp(employee);
 

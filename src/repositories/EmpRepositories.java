@@ -2,6 +2,7 @@ package repositories;
 
 import data.interfaces.IDB;
 import ent.Employee;
+import ent.Programmer;
 import repositories.interfaces.IEmpRepositories;
 
 import java.sql.*;
@@ -24,7 +25,7 @@ public class EmpRepositories implements IEmpRepositories {
             List<Employee> employees=new LinkedList<>();
 
             while(rs.next()){   //loop for save every object of Employee to LIST
-                Employee employee=new Employee(rs.getInt("id"),
+                Programmer employee=new Programmer(rs.getInt("id"),
                         rs.getString("name"), rs.getString("surname"),
                        rs.getInt("salary"),rs.getString("post"),
                         rs.getDate("hire_date"),rs.getString("language"),
@@ -41,7 +42,7 @@ public class EmpRepositories implements IEmpRepositories {
     }
 
     @Override
-    public boolean CreateEmp(Employee employee) {
+    public boolean CreateEmp(Programmer employee) {
         Connection con = null;
         try{
             con= db.getConnection();    //getting connection with database
@@ -86,7 +87,7 @@ public class EmpRepositories implements IEmpRepositories {
             ResultSet rs=st.executeQuery();
 
             if(rs.next()){
-                Employee employee=new Employee(rs.getInt("id"),
+                Programmer employee=new Programmer(rs.getInt("id"),
                         rs.getString("name"), rs.getString("surname"),
                         rs.getInt("salary"),rs.getString("post"),
                         rs.getDate("hire_date"),rs.getString("language"),
@@ -123,7 +124,7 @@ public class EmpRepositories implements IEmpRepositories {
             List<Employee> employees=new LinkedList<>();
 
             while(rs.next()){
-                Employee employee=new Employee(rs.getInt("id"),
+                Programmer employee=new Programmer(rs.getInt("id"),
                         rs.getString("name"), rs.getString("surname"),
                         rs.getInt("salary"),rs.getString("post"),
                         rs.getDate("hire_date"),rs.getString("language"),
@@ -161,7 +162,7 @@ public class EmpRepositories implements IEmpRepositories {
             List<Employee> employees=new LinkedList<>();
 
             while(rs.next()){
-                Employee employee=new Employee(rs.getInt("id"),
+                Programmer employee=new Programmer(rs.getInt("id"),
                         rs.getString("name"), rs.getString("surname"),
                         rs.getInt("salary"),rs.getString("post"),
                         rs.getDate("hire_date"),rs.getString("language"),
@@ -200,7 +201,7 @@ public class EmpRepositories implements IEmpRepositories {
             List<Employee> employees=new LinkedList<>();
 
             while(rs.next()){
-                Employee employee=new Employee(rs.getInt("id"),
+                Programmer employee=new Programmer(rs.getInt("id"),
                         rs.getString("name"), rs.getString("surname"),
                         rs.getInt("salary"),rs.getString("post"),
                         rs.getDate("hire_date"),rs.getString("language"),
@@ -240,7 +241,7 @@ public class EmpRepositories implements IEmpRepositories {
             List<Employee> employees=new LinkedList<>();
 
             while(rs.next()){
-                Employee employee=new Employee(rs.getInt("id"),
+                Programmer employee=new Programmer(rs.getInt("id"),
                         rs.getString("name"), rs.getString("surname"),
                         rs.getInt("salary"),rs.getString("post"),
                         rs.getDate("hire_date"),rs.getString("language"),
@@ -281,7 +282,7 @@ public class EmpRepositories implements IEmpRepositories {
             List<Employee> employees=new LinkedList<>();
 
             while(rs.next()){
-                Employee employee=new Employee(rs.getInt("id"),
+                Programmer employee=new Programmer(rs.getInt("id"),
                         rs.getString("name"), rs.getString("surname"),
                         rs.getInt("salary"),rs.getString("post"),
                         rs.getDate("hire_date"),rs.getString("language"),
@@ -321,7 +322,7 @@ public class EmpRepositories implements IEmpRepositories {
             List<Employee> employees=new LinkedList<>();
 
             while(rs.next()){
-                Employee employee=new Employee(rs.getInt("id"),
+                Programmer employee=new Programmer(rs.getInt("id"),
                         rs.getString("name"), rs.getString("surname"),
                         rs.getInt("salary"),rs.getString("post"),
                         rs.getDate("hire_date"),rs.getString("language"),

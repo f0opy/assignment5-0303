@@ -1,13 +1,14 @@
 package repositories.interfaces;
 
 import ent.Employee;
+import ent.Programmer;
 
 import java.sql.Date;
 import java.util.List;
 
 public interface IEmpRepositories {
    List<Employee> GetAllEmp();      //to get all existing emp in database
-    boolean CreateEmp(Employee employee); //to create emp
+    boolean CreateEmp(Programmer employee); //to create emp
     Employee getEmpById(int id);            //to get emp by id
     List<Employee> GetEmpByName(String name); //to get emp by name
     List<Employee> GetEmpByPost(String post);  //to get emp by post

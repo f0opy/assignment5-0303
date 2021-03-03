@@ -3,26 +3,35 @@ package ent;
 import java.sql.Date;
 
 public class Manager extends Employee{
-    public Date deadline;
+    public Date deadl;
 
-    public void setDeadlines(Date date){
 
+    public Manager() {
+    }
+
+    public Manager(String name, String surname, int salary, Date hire_date) {
+        super(name, surname, salary, hire_date);
+    }
+
+    public Manager(int id, String name, String surname, int salary, Date hire_date) {
+        super(id, name, surname, salary, hire_date);
+    }
+
+    public Date getDeadl() {
+
+        return deadl;
+    }
+
+    public void setDeadl(Date deadline) {
+        this.deadl = deadline;
     }
 
 
-
-    public Date getDeadline() {
-        return deadline;
-    }
-
-    public void setDeadline(Date deadline) {
-        this.deadline = deadline;
-    }
 
     @Override
     public String toString() {
         return "Manager{" +
-                "deadline=" + deadline +
+                "deadline=" + deadl +
                 '}';
     }
 }
